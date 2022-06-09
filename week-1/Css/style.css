@@ -161,6 +161,17 @@ button {
   }
 }
 
+@media screen and (min-width: 500px) {
+  .content-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box {
+    flex-grow: 1;
+    flex-basis: 45%;
+  }
+}
+
 @media screen and (min-width: 800px) {
   label {
     display: none;
@@ -178,5 +189,12 @@ button {
   }
   .menu li a {
     padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-box {
+    width: 100%;
+    max-width: 1200px;
   }
 }
