@@ -108,6 +108,52 @@ input:checked ~ .menu {
   max-height: 300px;
 }
 
+body {
+  height: 1vh;
+}
+.greeting {
+  display: flex;
+  background-color: rgb(199, 223, 241);
+  height: 230px;
+}
+
+section h1 {
+  margin: auto;
+}
+
+section h1,
+section h2 {
+  font-size: 2em;
+}
+
+section h2 {
+  margin: 0.7em auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.content-box {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.box {
+  padding-top: 1em;
+  height: 150px;
+  background-color: rgb(134, 136, 137);
+  margin: 5px;
+}
+
+button {
+  margin: 2em;
+  padding: 0.7em;
+  outline: none;
+  border: solid 1px transparent;
+  background-color: rgb(199, 223, 241);
+  font-size: 1em;
+}
 /* media query */
 @media screen and (max-width: 500px) {
   .logo {
