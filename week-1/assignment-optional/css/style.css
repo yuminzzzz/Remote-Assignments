@@ -1,0 +1,139 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 0 1px 5px grey;
+          box-shadow: 0 1px 5px grey;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0.3em;
+}
+
+i {
+  color: #595959;
+}
+
+.menu-bar {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-bar {
+  margin-left: 0;
+}
+
+.menu-bar i {
+  margin: auto;
+}
+
+img {
+  width: 185px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.search i {
+  font-size: 24px;
+}
+
+.search {
+  margin-left: auto;
+}
+
+.more-info-icon,
+.user-icon {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.more-info-icon {
+  border: solid 0.1em #dadce0;
+}
+
+.more-info-icon-item {
+  margin: auto;
+}
+
+.more-info-icon-item,
+.more-info-icon-item::before,
+.more-info-icon-item::after {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #5f6368;
+}
+
+.more-info-icon-item::before,
+.more-info-icon-item::after {
+  position: absolute;
+  content: "";
+}
+
+.more-info-icon-item::before {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.more-info-icon-item::after {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.user-icon {
+  background-color: #5c6bc0;
+  color: #fff;
+}
+
+.user-name {
+  margin: auto;
+}
+
+.user-info {
+  margin-right: 0;
+}
+
+.more-info-icon:hover,
+.menu-bar:hover {
+  background-color: #e8eaed;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/*# sourceMappingURL=style.css.map */
