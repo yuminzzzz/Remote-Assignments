@@ -2,6 +2,20 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
+
+.first-content-title {
+  color: #1a73e8;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+section {
+  padding: 1em 0;
+  border-bottom: solid 0.08em #f1f3f4;
+}
 //nav
 header {
   padding: 0.5em 1em;
@@ -119,4 +133,54 @@ img {
 .menu-bar:hover {
   background-color: #e8eaed;
   transition: 0.2s;
+}
+
+// first-section
+.first-body {
+  padding: 0 1em;
+}
+
+figure {
+  margin: 2.5em auto;
+  img {
+    width: 100vw;
+    max-width: 100%;
+    aspect-ratio: 720 / 416;
+    vertical-align: middle;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.first-content {
+  margin-top: 2em;
+}
+
+.first-content-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 40px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.first-content-description {
+  line-height: 1.5em;
+}
+
+.first-content-button {
+  padding-top: 2em;
+  a {
+    color: #fff;
+    background-color: #1a73e8;
+    line-height: 36px;
+    width: 151.917px;
+    padding: 0 1.5em;
+    margin: 4px 4px 4px 0;
+    display: block;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+  }
 }
