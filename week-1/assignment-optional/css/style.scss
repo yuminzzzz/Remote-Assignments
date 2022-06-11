@@ -14,7 +14,15 @@ a:visited {
 
 section {
   padding: 1em 0;
-  border-bottom: solid 0.08em #f1f3f4;
+}
+
+.website-name {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.website-figure {
+  margin: 0;
 }
 //nav
 header {
@@ -60,7 +68,7 @@ i {
   }
 }
 
-img {
+header img {
   width: 185px;
   height: 32px;
   overflow: hidden;
@@ -136,11 +144,16 @@ img {
 }
 
 // first-section
-.first-body {
+.first {
+  border-bottom: solid 0.08em #f1f3f4;
+}
+
+.first-body,
+.second-body {
   padding: 0 1em;
 }
 
-figure {
+.first-img figure {
   margin: 2.5em auto;
   img {
     width: 100vw;
@@ -182,5 +195,38 @@ figure {
     border-radius: 3px;
     font-size: 14px;
     text-align: center;
+  }
+}
+
+// second section
+.second-content-title {
+  text-align: center;
+  line-height: 2rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.second-content {
+  margin: 2em auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.website-item-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+}
+
+.website-figure {
+  img {
+    width: 64px;
+    height: 64px;
+  }
+  .android {
+    width: 64px;
+    height: 36.1667px;
   }
 }

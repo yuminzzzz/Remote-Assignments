@@ -15,7 +15,15 @@ a:visited {
 
 section {
   padding: 1em 0;
-  border-bottom: solid 0.08em #f1f3f4;
+}
+
+.website-name {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.website-figure {
+  margin: 0;
 }
 
 header {
@@ -72,7 +80,7 @@ i {
   margin: auto;
 }
 
-img {
+header img {
   width: 185px;
   height: 32px;
   overflow: hidden;
@@ -151,15 +159,20 @@ img {
   transition: 0.2s;
 }
 
-.first-body {
+.first {
+  border-bottom: solid 0.08em #f1f3f4;
+}
+
+.first-body,
+.second-body {
   padding: 0 1em;
 }
 
-figure {
+.first-img figure {
   margin: 2.5em auto;
 }
 
-figure img {
+.first-img figure img {
   width: 100vw;
   max-width: 100%;
   aspect-ratio: 720 / 416;
@@ -200,5 +213,47 @@ figure img {
   border-radius: 3px;
   font-size: 14px;
   text-align: center;
+}
+
+.second-content-title {
+  text-align: center;
+  line-height: 2rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.second-content {
+  margin: 2em auto 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.website-item-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 96px;
+}
+
+.website-figure img {
+  width: 64px;
+  height: 64px;
+}
+
+.website-figure .android {
+  width: 64px;
+  height: 36.1667px;
 }
 /*# sourceMappingURL=style.css.map */
