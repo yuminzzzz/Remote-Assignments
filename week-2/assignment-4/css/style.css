@@ -36,32 +36,59 @@ label {
 }
 /* menu button */
 .menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 50px;
   height: 50px;
 }
 
-.common {
-  position: absolute;
+.menu-btn-item,
+.menu-btn-item::before,
+.menu-btn-item::after {
   width: 30px;
   height: 3px;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: grey;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
 }
 
-.menu-btn-top {
-  top: 30%;
+.menu-btn-item::before,
+.menu-btn-item::after {
+  position: absolute;
+  content: "";
 }
 
-.menu-btn-middle {
-  top: 50%;
+.menu-btn-item::before {
+  transform: translateY(-10px);
 }
 
-.menu-btn-bottom {
-  top: 70%;
+.menu-btn-item::after {
+  transform: translateY(10px);
+}
+
+/* animation */
+.menu-btn.open .menu-btn-item {
+  transition: 0.5s ease-out;
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-item::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn-item::after {
+  transform: rotate(-45deg);
+}
+
+.menu-btn-item,
+.menu-btn-item::before,
+.menu-btn-item::after,
+.menu-btn.open .menu-btn-item::before,
+.menu-btn.open .menu-btn-item::after {
+  transition: 0.3s ease-out;
 }
 
 input:checked ~ .menu {
@@ -95,7 +122,6 @@ input:checked ~ .menu {
   background: #5d5d5d;
   color: #fff;
 }
-
 
 body {
   height: 1vh;
