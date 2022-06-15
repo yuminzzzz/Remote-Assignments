@@ -8,3 +8,12 @@ menuButton.addEventListener("click", () => {
     menuButton.classList.add("open");
   }
 });
+
+//change text
+const greeting = document.querySelector(".greeting");
+
+function changeText() {
+  greeting.innerHTML = `<h1>Have a good time!</h1>`;
+}
+
+greeting.addEventListener("click", changeText);

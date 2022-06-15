@@ -174,11 +174,6 @@ button {
   font-size: 1em;
 }
 /* media query */
-@media screen and (max-width: 500px) {
-  .logo {
-    font-size: 1.8em;
-  }
-}
 
 @media screen and (min-width: 500px) {
   .content-box {
