@@ -31,7 +31,7 @@ label {
   line-height: 50px;
   cursor: pointer;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   right: 50px;
 }
 /* menu button */
@@ -152,7 +152,8 @@ section h2 {
   text-align: center;
 }
 
-.content-box {
+.content-box,
+.content-box2 {
   margin: 0 auto;
   width: 90%;
 }
@@ -176,7 +177,8 @@ button {
 /* media query */
 
 @media screen and (min-width: 500px) {
-  .content-box {
+  .content-box,
+  .content-box2 {
     display: flex;
     flex-wrap: wrap;
   }
@@ -209,7 +211,8 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  .content-box {
+  .content-box,
+  .content-box2 {
     width: 100%;
     max-width: 1200px;
   }
