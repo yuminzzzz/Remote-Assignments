@@ -3,8 +3,8 @@ Complete the function below to find the max number of the passing array of numbe
 
 function max(numbers) {
   let maxNumber = numbers[0];
-  numbers.forEach((i) => {
-    if (i > maxNumber) maxNumber = i;
+  numbers.forEach((number) => {
+    if (number > maxNumber) maxNumber = number;
   });
   return maxNumber;
 }
@@ -40,9 +40,9 @@ Complete the function below to calculate the total price of all products after a
 
 function calculate(data) {
   const { discount, products } = data;
-  let total = 0;
-  products.forEach((item) => (total += item.price * discount));
-  return total;
+  return products
+    .map((item) => item.price * discount)
+    .reduce((acc, cur) => acc + cur, 0);
 }
 console.log(
   calculate({
@@ -75,7 +75,7 @@ function twoSum(nums, target) {
   let result = [];
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
-      if (!result.length) {
+      if (!result.length && i !== j ) {
         if (nums[i] + nums[j] === target) {
           result.push(i, j);
         }
