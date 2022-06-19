@@ -40,9 +40,7 @@ Complete the function below to calculate the total price of all products after a
 
 function calculate(data) {
   const { discount, products } = data;
-  return products
-    .map((item) => item.price * discount)
-    .reduce((acc, cur) => acc + cur, 0);
+  return products.reduce((acc, cur) => acc + cur.price * discount, 0);
 }
 console.log(
   calculate({
@@ -72,19 +70,12 @@ console.log(
 Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. */
 
 function twoSum(nums, target) {
-  let result = [];
   for (let i = 0; i < nums.length; i++) {
-    for (let j = 0; j < nums.length; j++) {
-      if (!result.length && i !== j ) {
-        if (nums[i] + nums[j] === target) {
-          result.push(i, j);
-        }
-      }
-    }
+    let index = nums.indexOf(target - nums[i]);
+    if (index !== -1 && index !== i) return [i, index];
   }
-  return result;
 }
-console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([1, 2, 8, 1], 3));
 
 /*
 For example:
