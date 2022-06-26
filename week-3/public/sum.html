@@ -15,7 +15,7 @@
     <div class="form-outline">
       <div class="form">
         <label for="number"><h1 class="title">Please enter here:</h1></label>
-        <div class="input-content">
+        <div class="main-content">
           <input
             type="text"
             id="number"
@@ -29,36 +29,38 @@
       </div>
     </div>
     <script>
-      const mainContent = document.querySelector(".form");
+      const indexContent = document.querySelector(".form");
       const title = document.querySelector(".title");
-      const result = document.querySelector(".input-content");
+      const mainContent = document.querySelector(".main-content");
       const input = document.querySelector("input");
-      let value = input.value;
       const homePageButton = document.querySelector(".home-page");
       const submitButton = document.querySelector(".submit");
-      const url = `http://localhost:3000/`;
-      const query = `getData?number=${value}`;
-
+      const url = "http://localhost:3000/";
       submitButton.addEventListener("click", fetchData);
       homePageButton.addEventListener("click", returnIndex);
-
-      function fetchData() {
+      async function fetchData() {
         title.textContent = "Your result is:";
+        let value = await input.value;
+        let query = await `getData?number=${value}`;
         fetch(url + query)
           .then(checkStatus)
           .then((response) => response.text())
           .then(
             (returnValue) =>
-              (result.innerHTML = `<p class=result>${returnValue}</p>
-          <button><a class="last-page" href="http://localhost:3000/sum.html">back to last page</a></button>`)
+              (mainContent.innerHTML = `
+                <p class=result>${returnValue}</p>
+                <button><a href="http://localhost:3000/sum.html">back to last page</a></button>`)
           );
-        value = "";
       }
       function returnIndex() {
         fetch(url)
           .then(checkStatus)
           .then((response) => response.text())
-          .then((data) => (mainContent.innerHTML = `<h1>${data}</h1>`));
+          .then(
+            (data) =>
+              (indexContent.innerHTML = `
+              <h1>${data}</h1><button><a href="http://localhost:3000/sum.html">back to last page</a></button>`)
+          );
       }
       function checkStatus(response) {
         if (response.ok) {
