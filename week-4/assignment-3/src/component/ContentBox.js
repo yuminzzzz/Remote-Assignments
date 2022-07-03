@@ -1,12 +1,20 @@
 const ContentBox = () => {
+  const contentData = [
+    { name: "Content Box 1", id: 1 },
+    { name: "Content Box 2", id: 2 },
+    { name: "Content Box 3", id: 3 },
+    { name: "Content Box 4", id: 4 },
+  ];
+
   return (
     <div className="content-box">
-      <div className="box">Content Box 1</div>
-      <div className="box">Content Box 2</div>
-      <div className="box">Content Box 3</div>
-      <div className="box">Content Box 4</div>
+      {contentData.map((item) => (
+        <div className="box" id={item.id}>
+          {item.name}
+        </div>
+      ))}
     </div>
   );
 };
 
-export default ContentBox
+export default ContentBox;

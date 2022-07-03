@@ -1,20 +1,20 @@
-
 const Sidebar = () => {
+  const listData = [
+    { name: "Item1", id: 1 },
+    { name: "Item2", id: 2 },
+    { name: "Item3", id: 3 },
+    { name: "Item4", id: 4 },
+  ];
 
   return (
     <ul className="menu">
-      <li>
-        <a href="#">Item1</a>
-      </li>
-      <li>
-        <a href="#">Item2</a>
-      </li>
-      <li>
-        <a href="#">Item3</a>
-      </li>
-      <li>
-        <a href="#">Item4</a>
-      </li>
+      {listData.map((item) => (
+        <li>
+          <a href="#" id={item.id}>
+            {item.name}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 };
