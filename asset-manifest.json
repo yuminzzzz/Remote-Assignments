@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Remote-Assignments/static/css/main.6ce3597d.css",
-    "main.js": "/Remote-Assignments/static/js/main.b70f3c1b.js",
+    "main.js": "/Remote-Assignments/static/js/main.d9162e0e.js",
     "static/media/logo.svg": "/Remote-Assignments/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Remote-Assignments/index.html",
     "main.6ce3597d.css.map": "/Remote-Assignments/static/css/main.6ce3597d.css.map",
-    "main.b70f3c1b.js.map": "/Remote-Assignments/static/js/main.b70f3c1b.js.map"
+    "main.d9162e0e.js.map": "/Remote-Assignments/static/js/main.d9162e0e.js.map"
   },
   "entrypoints": [
     "static/css/main.6ce3597d.css",
-    "static/js/main.b70f3c1b.js"
+    "static/js/main.d9162e0e.js"
   ]
 }
